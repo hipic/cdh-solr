@@ -7,6 +7,14 @@ Requirement: http://github.com/hipic/whirr_cm
 After launching Cloudera Manager and its instances as shown at whirr_cm above, go to 'Host' > 'Parcels' tab of the Cloudera Manager's Web UI.
 Then, you can download the latest available CDH, Solr, Impala.
 
-Download "SOLR 0.9.1-1.cdh4.3.0.p0.275"
+Download "CDH 4.3.0-1.cdh4.3.0.p0.22" > Distribute > Activate > Restart the current Cluster
+Download "SOLR 0.9.1-1.cdh4.3.0.p0.275" > Distribute > Activate > Restart the current Cluster
+
+Note: Restarting the cluster will take several minutes
 
 
+
+
+## References
+#### [1].
+#### [2].
