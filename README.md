@@ -16,13 +16,18 @@ $ sudo ./cloudera-manager-installer.bin
 #### (3) All Services > Add Cluster > Continue on Coudera Manager Express Wizard > CentOS 6.3; m1.xlarge; ...
 #### Note: >= m1.large recommended
 
+### Stop unneccessay services
+Stop HBase, Hive, Oozie, Sqoop
+
 ### Activate Solr service
 
 After launching Cloudera Manager and its instances as shown at whirr_cm above, go to 'Host' > 'Parcels' tab of the Cloudera Manager's Web UI.
 Then, you can download the latest available CDH, Solr, Impala.
 
-Download "CDH 4.3.0-1.cdh4.3.0.p0.22" > Distribute > Activate > Restart the current Cluster
 Download "SOLR 0.9.1-1.cdh4.3.0.p0.275" > Distribute > Activate > Restart the current Cluster
+
+#### not sure yet to download CDH 4.3.0-1
+Download "CDH 4.3.0-1.cdh4.3.0.p0.22" > Distribute > Activate > Restart the current Cluster
 
 Note: Restarting the cluster will take several minutes
 
