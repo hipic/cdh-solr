@@ -1,7 +1,7 @@
-cdh-solr: Solr on CDH4
+cdh-solr: Solr on CDH4 using Cloudera Manager
 ========
 
-## This is to illustrate how to lauch Solr on CDH using an AWS instance
+## This is to illustrate how to lauch Solr on CDH using Cloudera Manager and an AWS instance
 
 
 ### Install Cloudera Manager from an AWS instance
@@ -31,4 +31,5 @@ Note: Restarting the cluster will take several minutes
 
 ## References
 #### [1]. http://github.com/hipic/whirr_cm
-#### [2].
+#### [2]. http://blog.cloudera.com/blog/2013/03/how-to-create-a-cdh-cluster-on-amazon-ec2-via-cloudera-manager/
+
