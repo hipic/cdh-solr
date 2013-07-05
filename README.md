@@ -31,6 +31,8 @@ Download "CDH 4.3.0-1.cdh4.3.0.p0.22" > Distribute > Activate > Restart the curr
 
 Note: Restarting the cluster will take several minutes
 
+### Add Solr service
+Actions (of Cluster 1 - CDH4) > Add a Service > Solr > Zookeeper as a dependency
 
 
 
