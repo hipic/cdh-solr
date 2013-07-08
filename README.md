@@ -19,14 +19,14 @@ $ sudo ./cloudera-manager-installer.bin
 ### Stop unneccessay services
 Stop HBase, Hive, Oozie, Sqoop
 
-### Activate Solr service
+#### Optional: Activate Solr service
 
 After launching Cloudera Manager and its instances as shown at whirr_cm above, go to 'Host' > 'Parcels' tab of the Cloudera Manager's Web UI.
 Then, you can download the latest available CDH, Solr, Impala.
 
 Download "SOLR 0.9.1-1.cdh4.3.0.p0.275" > Distribute > Activate > Restart the current Cluster
 
-#### not sure yet to download CDH 4.3.0-1
+#### Optional: download CDH 4.3.0-1
 Download "CDH 4.3.0-1.cdh4.3.0.p0.22" > Distribute > Activate > Restart the current Cluster
 
 Note: Restarting the cluster will take several minutes
@@ -34,12 +34,22 @@ Note: Restarting the cluster will take several minutes
 ### Add Solr service
 Actions (of Cluster 1 - CDH4) > Add a Service > Solr > Zookeeper as a dependency
 
+### Open a Web UI of Hue
+Default login/pwd is admin
+You can see Solr. Select it
+
 ### Update Solr conf at a zookeeper node
 You can see a solr configuration file as '/etc/default/solr' and update it with as follows:
 ```bash
 sudo vi /etc/default/solr 
 ```
-
+### Create a collection
+Run the following commands to create a collection at a zookeeper node
+```bash
+$ solrctl instancedir --generate $HOME/solr_configs
+$ solrctl instancedir --create collection $HOME/solr_configs
+$ solrctl collection --create collection -s 1
+```
 
 ## References
 #### [1]. http://github.com/hipic/whirr_cm
