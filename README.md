@@ -55,11 +55,26 @@ $ sudo -u hdfs hadoop fs -chown solr /solr
 ```
 
 ### Create a collection
+
+You need to add solr to zookeeper
+```bash
+$ solrctl init
+```
+or
+```bash
+$ solrctl init --force
+```
+Then, at Cloudera Manager's Web UI, restart solr service.
+
 Run the following commands to create a collection at a zookeeper node
 ```bash
 $ solrctl instancedir --generate $HOME/solr_configs
 $ solrctl instancedir --create collection $HOME/solr_configs
 $ solrctl collection --create collection -s 1
+```
+While running 'solrctl collection ...', you may go to /var/log/solr and check out if the solr runs well without any error:
+```bash
+[ec2-user@ip-10-138-xx-xx solr]$ tail -f solr-cmf-solr1-SOLR_SERVER-ip-10-138-xx-xx.ec2.internal.log.out 
 ```
 
 ## References
