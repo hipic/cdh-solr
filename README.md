@@ -100,6 +100,9 @@ Open Hue Web UI at Cloudera Manager's Hue service and select solr tab.
 ##### 3. As default, the page shows 1-15 of 32 results.
 ##### 4. Type in 'photo' at a search box ans will show 1 -2 of 2 results.
 
+#### Customize the view of Solr Web UI
+Select 'Customize this collection' that will present Visual Editor for view.
+
 ## References
 #### [1]. http://github.com/hipic/whirr_cm
 #### [2]. http://blog.cloudera.com/blog/2013/03/how-to-create-a-cdh-cluster-on-amazon-ec2-via-cloudera-manager/
