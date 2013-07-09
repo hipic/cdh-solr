@@ -19,7 +19,7 @@ $ sudo ./cloudera-manager-installer.bin
 ### Stop unneccessay services
 Stop HBase, Hive, Oozie, Sqoop
 
-### All systems are located at 'usr/lib/'
+#### All systems are located at 'usr/lib/'
 For example, /usr/lib/solr, /usr/lib/zookeeper, ...
 
 #### Optional: Activate Solr service
