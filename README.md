@@ -56,8 +56,9 @@ $ sudo -u hdfs hadoop fs -chown solr /solr
 
 ### Create a collection
 
-You need to add solr to zookeeper
+You change to root account and need to add solr to zookeeper. From now on, I run shell commands as root user.
 ```bash
+$ sudo su
 $ solrctl init
 ```
 or
@@ -74,9 +75,24 @@ $ solrctl collection --create collection -s 1
 ```
 While running 'solrctl collection ...', you may go to /var/log/solr and check out if the solr runs well without any error:
 ```bash
-[ec2-user@ip-10-138-xx-xx solr]$ tail -f solr-cmf-solr1-SOLR_SERVER-ip-10-138-xx-xx.ec2.internal.log.out 
+$ tail -f solr-cmf-solr1-SOLR_SERVER-ip-10-138-xx-xx.ec2.internal.log.out 
 ```
-
+Upload a solr example
+```bash
+$ cd /usr/share/doc/solr-doc-4.3.0+52/example/exampledocs/
+$ java -Durl=http://127.0.0.1:8983/solr/collection/update -jar post.jar *.xml
+SimplePostTool version 1.5
+Posting files to base url http://127.0.0.1:8983/solr/collection/update using content-type application/xml..
+POSTing file gb18030-example.xml
+POSTing file hd.xml
+POSTing file ipod_other.xml
+...
+POSTing file utf8-example.xml
+POSTing file vidcard.xml
+14 files indexed.
+COMMITting Solr index changes to http://127.0.0.1:8983/solr/collection/update..
+Time spent: 0:00:00.818
+```
 ## References
 #### [1]. http://github.com/hipic/whirr_cm
 #### [2]. http://blog.cloudera.com/blog/2013/03/how-to-create-a-cdh-cluster-on-amazon-ec2-via-cloudera-manager/
