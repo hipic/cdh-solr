@@ -43,6 +43,14 @@ You can see a solr configuration file as '/etc/default/solr' and update it with 
 ```bash
 sudo vi /etc/default/solr 
 ```
+Note: it may not recognize 'localhost' so that use '127.0.0.1' alternatively
+
+### Create the /solr directory in HDFS:
+```bash
+$ sudo -u hdfs hadoop fs -mkdir /solr
+$ sudo -u hdfs hadoop fs -chown solr /solr
+```
+
 ### Create a collection
 Run the following commands to create a collection at a zookeeper node
 ```bash
