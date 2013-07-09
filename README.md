@@ -55,6 +55,8 @@ $ solrctl collection --create collection -s 1
 #### [1]. http://github.com/hipic/whirr_cm
 #### [2]. http://blog.cloudera.com/blog/2013/03/how-to-create-a-cdh-cluster-on-amazon-ec2-via-cloudera-manager/
 #### [3]. Managing Clusters with Cloudera Manager, http://www.cloudera.com/content/cloudera-content/cloudera-docs/CM4Ent/latest/PDF/Managing-Clusters-with-Cloudera-Manager.pdf
-#### [4]. Cloudera Search Installation Guide, http://www.cloudera.com/content/cloudera-content/cloudera-docs/Search/latest/PDF/Cloudera-Search-Installation-Guide.pdf
+#### [4]. Cloudera Search Installation Guide, http://www.cloudera.com/content/cloudera-content/cloudera-docs/Search/latest/Cloudera-Search-Installation-Guide
+#### [5]. Cloudera Search User Guide, http://www.cloudera.com/content/cloudera-content/cloudera-docs/Search/latest/Cloudera-Search-User-Guide
+#### [6]. Cloudera Search Installation Guide, http://www.cloudera.com/content/cloudera-content/cloudera-docs/Search/latest/PDF/Cloudera-Search-Installation-Guide.pdf
 
 
