@@ -19,6 +19,9 @@ $ sudo ./cloudera-manager-installer.bin
 ### Stop unneccessay services
 Stop HBase, Hive, Oozie, Sqoop
 
+### All systems are located at 'usr/lib/'
+For example, /usr/lib/solr, /usr/lib/zookeeper, ...
+
 #### Optional: Activate Solr service
 
 After launching Cloudera Manager and its instances as shown at whirr_cm above, go to 'Host' > 'Parcels' tab of the Cloudera Manager's Web UI.
