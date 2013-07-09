@@ -77,7 +77,7 @@ While running 'solrctl collection ...', you may go to /var/log/solr and check ou
 ```bash
 $ tail -f solr-cmf-solr1-SOLR_SERVER-ip-10-138-xx-xx.ec2.internal.log.out 
 ```
-Upload a solr example
+Upload an example data to solr
 ```bash
 $ cd /usr/share/doc/solr-doc-4.3.0+52/example/exampledocs/
 $ java -Durl=http://127.0.0.1:8983/solr/collection/update -jar post.jar *.xml
@@ -93,6 +93,12 @@ POSTing file vidcard.xml
 COMMITting Solr index changes to http://127.0.0.1:8983/solr/collection/update..
 Time spent: 0:00:00.818
 ```
+#### Query using Hue Web UI
+Open Hue Web UI at Cloudera Manager's Hue service and select solr tab.
+#### 1. Make sure to import collections - core may not be needed #### 2. select "Search page" link at the top right of the solr web UI page.
+#### 3. As default, the page shows 1-15 of 32 results
+#### 4. Type in 'photo' at a search box ans will show 1 -2 of 2 results
+
 ## References
 #### [1]. http://github.com/hipic/whirr_cm
 #### [2]. http://blog.cloudera.com/blog/2013/03/how-to-create-a-cdh-cluster-on-amazon-ec2-via-cloudera-manager/
