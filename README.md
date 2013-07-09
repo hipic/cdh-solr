@@ -95,10 +95,10 @@ Time spent: 0:00:00.818
 ```
 #### Query using Hue Web UI
 Open Hue Web UI at Cloudera Manager's Hue service and select solr tab.
-1. Make sure to import collections - core may not be needed.
-2. select "Search page" link at the top right of the solr web UI page.
-3. As default, the page shows 1-15 of 32 results.
-4. Type in 'photo' at a search box ans will show 1 -2 of 2 results.
+##### 1. Make sure to import collections - core may not be needed.
+##### 2. select "Search page" link at the top right of the solr web UI page.
+##### 3. As default, the page shows 1-15 of 32 results.
+##### 4. Type in 'photo' at a search box ans will show 1 -2 of 2 results.
 
 ## References
 #### [1]. http://github.com/hipic/whirr_cm
