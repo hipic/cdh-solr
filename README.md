@@ -103,6 +103,26 @@ Open Hue Web UI at Cloudera Manager's Hue service and select solr tab.
 #### Customize the view of Solr Web UI
 Select 'Customize this collection' that will present Visual Editor for view.
 
+### Trouble Shooting
+if you cannot open a Web UI of 'http://public_dns:8983/solr', you need to open AWS console management web and look at the name of security group of the solr instance.
+That is, NETWORK & SECURITYGROUP > Security Groups > [Your Solr Security Group] > Inboud > Port Range > [Add 8983] > Add Rule > Apply Change
+Then, test the port
+```bash
+$ wget http://public_dns:8983/solr
+```
+And, index.html of the solr server will be downloaded.
+```bash
+$ more index.html 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional informa...
+```
+
+
 ## References
 #### [1]. http://github.com/hipic/whirr_cm
 #### [2]. http://blog.cloudera.com/blog/2013/03/how-to-create-a-cdh-cluster-on-amazon-ec2-via-cloudera-manager/
