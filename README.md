@@ -22,6 +22,15 @@ Stop HBase, Hive, Oozie, Sqoop
 #### All systems are located at 'usr/lib/'
 For example, /usr/lib/solr, /usr/lib/zookeeper, ...
 
+Sometimes, it is not at '/usr/lib', then find the location as follows:
+```bash
+$ ls -la /usr/bin/sqoop
+lrwxrwxrwx 1 root root 23 Aug 19 16:03 /usr/bin/sqoop -> /etc/alternatives/sqoop
+$ ls -al /etc/alternatives/sqoop 
+lrwxrwxrwx 1 root root 58 Aug 19 16:03 /etc/alternatives/sqoop -> /opt/cloudera/parcels/CDH-4.3.0-1.cdh4.3.0.p0.22/bin/sqoop
+$ ls -al /opt/cloudera/parcels/CDH-4.3.0-1.cdh4.3.0.p0.22/lib
+```
+
 #### Optional: Activate Solr service
 
 After launching Cloudera Manager and its instances as shown at whirr_cm above, go to 'Host' > 'Parcels' tab of the Cloudera Manager's Web UI.
