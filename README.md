@@ -98,6 +98,13 @@ SOLR_ZK_ENSEMBLE=host2:2181,host3:2181,host4:2181/solr
 ```
 Then, at Cloudera Manager's Web UI, restart solr service.
 
+Before you create 'solr_confis' directory, you need to locate 'coreconfig-template' directory of $SOLR_HOME, 
+that is '/opt/cloudera/parcels/SOLR-0.9.3-1.cdh4.3.0.p0.366/lib/solr
+':
+```bash
+[root@prism2 solr]# cd /opt/cloudera/parcels/SOLR-0.9.3-1.cdh4.3.0.p0.366/
+[root@prism2 SOLR-0.9.3-1.cdh4.3.0.p0.366]# ln -s ./lib/solr/coreconfig-template coreconfig-template
+```
 Run the following commands to create a collection at a zookeeper node
 ```bash
 $ solrctl instancedir --generate $HOME/solr_configs
