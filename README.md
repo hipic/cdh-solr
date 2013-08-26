@@ -65,7 +65,11 @@ $ sudo -u hdfs hadoop fs -chown solr /solr
 
 ### Create a collection
 
-You change to root account and need to add solr to zookeeper. From now on, I run shell commands as root user.
+$SOLR_HOME needs to be set, od which the location is found as in the begining:
+```bash
+export $SOLR_HOME=/opt/cloudera/parcels/SOLR-0.9.3-1.cdh4.3.0.p0.366
+```
+You change to root account and need to add solr to zookeeper. From now on, I run shell commands as root user. 
 ```bash
 $ sudo su
 $ solrctl init
