@@ -103,12 +103,12 @@ that is '/opt/cloudera/parcels/SOLR-0.9.3-1.cdh4.3.0.p0.366/lib/solr
 ':
 ```bash
 [root@prism2 solr]# cd /opt/cloudera/parcels/SOLR-0.9.3-1.cdh4.3.0.p0.366/
-[root@prism2 SOLR-0.9.3-1.cdh4.3.0.p0.366]# ln -s ./lib/solr/coreconfig-template coreconfig-template
+[root@prism2 SOLR-0.9.3-1.cdh4.3.0.p0.366]# cp -r ./lib/solr/coreconfig-template coreconfig-template
 ```
 Run the following commands to create a collection at a zookeeper node
 ```bash
-$ solrctl instancedir --generate $HOME/solr_configs
-$ solrctl instancedir --create collection $HOME/solr_configs
+$ solrctl instancedir --generate $SOLR_HOME/solr_configs
+$ solrctl instancedir --create collection $SOLR_HOME/solr_configs
 $ solrctl collection --create collection -s 1
 ```
 While running 'solrctl collection ...', you may go to /var/log/solr and check out if the solr runs well without any error:
