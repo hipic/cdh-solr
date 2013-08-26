@@ -58,7 +58,7 @@ sudo vi /etc/default/solr
 
 or $SOLR_HOME needs to be set, of which the location is found as in the begining:
 ```bash
-export $SOLR_HOME=/opt/cloudera/parcels/SOLR-0.9.3-1.cdh4.3.0.p0.366
+export SOLR_HOME=/opt/cloudera/parcels/SOLR-0.9.3-1.cdh4.3.0.p0.366
 ...
 sudo vi $SOLR_HOME/etc/default/solr 
 ```
