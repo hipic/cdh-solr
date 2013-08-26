@@ -55,6 +55,14 @@ At a node that has a Solr (zookeeper) installed, You can see a solr configuratio
 ```bash
 sudo vi /etc/default/solr 
 ```
+
+or $SOLR_HOME needs to be set, of which the location is found as in the begining:
+```bash
+export $SOLR_HOME=/opt/cloudera/parcels/SOLR-0.9.3-1.cdh4.3.0.p0.366
+...
+sudo vi $SOLR_HOME/etc/default/solr 
+```
+
 Note: it may not recognize 'localhost' so that use '127.0.0.1' alternatively
 
 ### Create the /solr directory in HDFS:
@@ -65,10 +73,6 @@ $ sudo -u hdfs hadoop fs -chown solr /solr
 
 ### Create a collection
 
-$SOLR_HOME needs to be set, od which the location is found as in the begining:
-```bash
-export $SOLR_HOME=/opt/cloudera/parcels/SOLR-0.9.3-1.cdh4.3.0.p0.366
-```
 You change to root account and need to add solr to zookeeper. From now on, I run shell commands as root user. 
 ```bash
 $ sudo su
@@ -88,7 +92,7 @@ Please configure SolrCloud via SOLR_ZK_ENSEMBLE setting in
 If you running remotely, please use --zk zk_ensemble.
 ```
 
-Update the zookeeper option, for example, solr runs on host2, host3, host4:
+If there are more than one zoopkeepers, update the zookeeper option, for example, solr runs on host2, host3, host4:
 ```bash
 SOLR_ZK_ENSEMBLE=host2:2181,host3:2181,host4:2181/solr
 ```
