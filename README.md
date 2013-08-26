@@ -51,7 +51,7 @@ Default login/pwd is admin
 You can see Solr. Select it
 
 ### Update Solr conf at a zookeeper node
-You can see a solr configuration file as '/etc/default/solr' and update it with as follows:
+At a node that has a Solr (zookeeper) installed, You can see a solr configuration file as '/etc/default/solr' and update it with as follows:
 ```bash
 sudo vi /etc/default/solr 
 ```
