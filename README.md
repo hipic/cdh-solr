@@ -78,6 +78,20 @@ or
 ```bash
 $ solrctl init --force
 ```
+
+If you see the following error/warning msgs from the above as well:
+```bash
+$ solrctl instancedir --list
+Warning: Non-SolrCloud mode has been completely deprecated
+Please configure SolrCloud via SOLR_ZK_ENSEMBLE setting in 
+/opt/cloudera/parcels/SOLR-0.9.3-1.cdh4.3.0.p0.366/bin/../etc/default/solr
+If you running remotely, please use --zk zk_ensemble.
+```
+
+Update the zookeeper option, for example, solr runs on host2, host3, host4:
+```bash
+SOLR_ZK_ENSEMBLE=host2:2181,host3:2181,host4:2181/solr
+```
 Then, at Cloudera Manager's Web UI, restart solr service.
 
 Run the following commands to create a collection at a zookeeper node
